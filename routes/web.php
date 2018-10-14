@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PagesController@index');
+Route::get('/news', 'PagesController@news')->middleware('verified');
+Route::post('/check_email', 'AjaxController@index');
+Auth::routes(['verify' => True]);
