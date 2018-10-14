@@ -35960,7 +35960,6 @@ $(document).ready(function () {
     $("#email").change(function () {
         var email = $("#email").val();
         var token = $('meta[name="csrf-token"]').attr('content');
-        console.log(email);
         $.ajax({
             type: 'POST',
             url: '/check_email',
